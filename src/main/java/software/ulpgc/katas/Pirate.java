@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public record Pirate(String name, int dobloons) {
-    public String status(int dobloons){ return list[levelStatus(dobloons)];}
+    public String status(){ return list.get(levelStatus());}
 
-    static List<String> list = List.of("Capitan", "Sailor", "CabinBoy");
+    static List<String> list = List.of("CabinBoy","Sailor", "Capitan");
 
-    private int levelStatus(int dobloons){
-        if (dobloons < 10) return 0;
-        if (dobloons < 20) return 1;
+    private int levelStatus(){
+        if (dobloons <= 10) return 0;
+        if (dobloons <= 20) return 1;
         return 2;
     }
 
