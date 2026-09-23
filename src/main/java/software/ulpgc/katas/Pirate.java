@@ -9,7 +9,12 @@ public record Pirate(String name, int cannons) {
     private final static int FRAGATA_LIMIT = 25;
     public void firePower(){typeShip.get(typeShip());}
 
+    private static final List<String> typeShip = List.of("Balandro", "Fragata", "Galeón");
 
-
+    private int typeShip(){
+        if(cannons < BALANDRO_LIMIT) return 0;
+        if(cannons > FRAGATA_LIMIT) return 1;
+        return 2;
+    }
 
 }
