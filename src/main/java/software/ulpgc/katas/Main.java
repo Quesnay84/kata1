@@ -1,10 +1,12 @@
 package software.ulpgc.katas;
 
-import static java.lang.System.*;
 public class Main {
     public static void main(String[] args) {
-        Island tenerife = new Island("Tenerife", 300);
-        System.out.println("a la isla: " + tenerife.name() + "; se tardará "+ tenerife.daysToReach() + " dias en llegar");
+        Pirate sparrow = new Pirate("jack", 60);
+        Pirate espronceda = new Pirate("jose", 10);
+        System.out.println("El pirata: " + sparrow.getName() + " tiene un: " + sparrow.typeShip());
+        System.out.println("El pirata: " + espronceda.getName() + " tiene un: " + espronceda.typeShip());
+
+
     }
 }
-
