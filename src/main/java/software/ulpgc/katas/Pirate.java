@@ -17,9 +17,9 @@ public class Pirate {
     public int getCannons() {
         return cannons;
     }
+
     private final static int BALANDRO_LIMIT = 10;
     private final static int FRAGATA_LIMIT = 20;
-
 
     public String typeShip(){ return shipList.get(numberShip());}
 
@@ -29,6 +29,8 @@ public class Pirate {
         if(cannons <= BALANDRO_LIMIT)return 0;
         if(cannons <= FRAGATA_LIMIT)return 1;
         return 2;
+
+
 
 
     }
